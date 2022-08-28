@@ -1,15 +1,20 @@
 <template>
-<div class="flex-shrink-1 d-flex justify-items-start align-items-center w-100  ps-1 ps-md-3 pt-3" style="min-height:0; min-width: 0;">
-    <img src="~/assets/img/ka-lumieres-lng.png" class="" alt="Ka lumières logo" style="height:40px; width:auto;" >
-</div>
-<div class="vstack justify-content-center align-items-center w-100 h-100">
-    <div class="flex-shrink-1 flex-grow-1" style="min-height:30vh; min-width: 0; max-height: 50vh;">
-        <img src="~/assets/img/ka-lumieres-lampe.svg" class="img-fluid h-100" alt="Ka lumières logo" >
-    </div>
-    <h5 class="mx-3 px-3 text-black text-center container">Services dans le domaine juridique et dans la rédaction de texte de tout type</h5>
-    <h1 class="p-3 p-xl-5">Coming Soon</h1>
-    <h5 class="mx-3 pb-1 text-black text-center">Pour en savoir plus ou nous contactez :</h5>
-    <div class="d-flex flex-column flex-md-row justify-content-center pb-5">
+<div class="vstack justify-content-center align-items-center w-100 h-100 px-3">
+    <!--<div class="flex-shrink-0" style="height:25%">&nbsp;</div>-->
+    <div class="flex-shrink-0 whitespace" >&nbsp;</div>
+    <!--<div class="flex-shrink-0 flex-grow-1" style="min-height:40%; min-width: 0;">
+        <img src="~/assets/img/ka-lumieres-lampe.svg" class="img-fluid h-100 ka-lampe" alt="Ka lumières logo">
+    </div>-->
+    <h5 class="px-3 text-black text-center container">Prestations juridiques et de rédaction de texte de tout type</h5>
+    <h1 class="px-3 text-white"><div class="hstack">
+            <div class="flex-shrink-1 flex-grow-0 mb-auto d-flex justify-items-start align-items-center" style="min-height:0; min-width: 0;">
+                <img src="~/assets/img/ka-lumieres-lampe-only.png" class="" alt="Ka lumières logo" style="height:60px; width:auto;" >
+            </div>
+            <div>Coming Soon!</div>
+        </div>
+    </h1>
+    <h5 class="px-3 text-black text-center">En attendant, suivez-nous sur Instagram</h5>
+    <div class="d-flex flex-column flex-md-row justify-content-center mb-5">
         <div class="d-flex flex-column flex-md-row ">
             <a class="hstack w-100 mx-3 text-decoration-none text-black fw-semibold" href="https://instagram.com/kalumieres">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
@@ -27,3 +32,16 @@
     </div>
 </div>
 </template>
+<style lang="scss">
+    @import '~/assets/sass/app.scss';
+    .whitespace {
+        min-height:65%;
+ 
+    @include make-col-ready();
+    @include media-breakpoint-up(md) {
+        min-height:45%;
+      }   
+    }
+
+
+</style>

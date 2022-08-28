@@ -5,15 +5,17 @@
   </div>
 </template>
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
 
 /** set bootstrap font variable to merriweather */
 body {
-  --bs-font-sans-serif:  Merriweather, sans-serif;
+  --bs-font-sans-serif:  Caveat, sans-serif;
+  --bs-body-font-family: var(--bs-font-sans-serif);
 }
 
-html, body, #__nuxt{
-  height: 100vh;
+html, body, #__nuxt, .bg-balance::before, .bg-balance{
+  height: 100%;
+  width: 100%;
 }
 .bg-balance::before {
   content: "";
@@ -22,26 +24,22 @@ html, body, #__nuxt{
   left: 0;
   right: 0;
 
-  width: 100%;
-  height: 100vh;
-
   z-index: -1;
   display: block;
   background: border-box no-repeat fixed;
   background-position: center;
   background-size: cover;
-  background-image: image-set( 
-        url('~/assets/img/ka-lumieres-bg-md.jpeg') 1x,
-        url('~/assets/img/ka-lumieres-bg-lg.jpeg') 2x,
-        url('~/assets/img/ka-lumieres-bg.jpeg') 3x,
-        );
-  filter:  blur(1px) brightness(0.8);
+  background-image: url('~/assets/img/ka-lumieres-bg-min.jpeg');
+  filter: brightness(0.7);
 }
 
 .bg-balance {
-  height: 100%;
   background: transparent;
   position: relative;
+}
+
+.ka-lampe {
+  filter: brightness(1.1);
 }
 
 .text-yellow-gold-gradient {
