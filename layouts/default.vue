@@ -27,7 +27,11 @@ body {
   background: border-box no-repeat fixed;
   background-position: center;
   background-size: cover;
-  background-image: url('~/assets/img/ka-lumieres-bg.jpeg');
+  background-image: image-set( 
+        url('~/assets/img/ka-lumieres-bg-md.jpeg') 1x,
+        url('~/assets/img/ka-lumieres-bg-lg.jpeg') 2x,
+        url('~/assets/img/ka-lumieres-bg.jpeg') 3x,
+        );
   filter:  blur(1px) brightness(0.8);
 }
 
@@ -42,5 +46,6 @@ body {
   background-clip: text;
   color: transparent;
 }
+
 
 </style> 
