@@ -12,6 +12,9 @@ body {
   --bs-font-sans-serif:  Merriweather, sans-serif;
 }
 
+html, body, #__nuxt{
+  height: 100vh;
+}
 .bg-balance::before {
   content: "";
 
@@ -20,7 +23,7 @@ body {
   right: 0;
 
   width: 100%;
-  height: 100%;
+  height: 100vh;
 
   z-index: -1;
   display: block;
@@ -36,7 +39,7 @@ body {
 }
 
 .bg-balance {
-  height: 100vh;
+  height: 100%;
   background: transparent;
   position: relative;
 }
