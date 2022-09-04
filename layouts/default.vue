@@ -1,6 +1,6 @@
 <template>
-  <div
-    class="bg-balance d-flex flex-column flex-nowrap justify-content-center justify-content-md-start align-items-center">
+  <div class="bg-balance d-flex flex-column flex-nowrap justify-content-center justify-content-md-start align-items-center">
+    <RGdprConsent />
     <slot />
   </div>
 </template>
