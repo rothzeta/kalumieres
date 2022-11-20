@@ -1,7 +1,7 @@
 <template>
     <div class="vstack justify-content-center align-items-center w-100 h-100 px-3">
         <div class="flex-shrink-0 whitespace">&nbsp;</div>
-        <h5 class="px-3 text-black text-center container">Prestations juridiques et de rédaction de texte de tout type
+        <h5 class="px-3 text-black text-center container mt-auto">Prestations juridiques et de rédaction de texte de tout type
         </h5>
         <h1 class="px-3 text-white">
             <div class="hstack">
@@ -14,7 +14,7 @@
             </div>
         </h1>
         <h5 class="px-3 text-black text-center">En attendant, suivez-nous sur Instagram</h5>
-        <div class="d-flex flex-column flex-md-row justify-content-center mb-5">
+        <div class="d-flex flex-column flex-md-row justify-content-center mb-3">
             <div class="d-flex flex-column flex-md-row ">
                 <a class="hstack w-100 mx-3 text-decoration-none text-black fw-semibold"
                     href="https://instagram.com/kalumieres">
@@ -36,13 +36,18 @@
                 </a>
             </div>
         </div>
+        <div class="container hstack align-center align-content-center mb-3">
+            <a class="d-block lh-1 col-4 text-center text-white" href="/pdf/mentions-legales-ka-lumieres.pdf">Mentions légales</a>
+            <a class="d-block lh-1 col-4 text-center text-white">Conditions d'utilisation</a>
+            <a class="d-block lh-1 col-4 text-center text-white">Politique de confidentialité</a>
+        </div>
     </div>
 </template>
 <style lang="scss">
 @import '~/assets/sass/app.scss';
 
 .whitespace {
-    min-height: 65%;
+    min-height: 55%;
 
     @include make-col-ready();
 
