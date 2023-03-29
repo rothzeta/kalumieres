@@ -6,7 +6,7 @@ export default defineNuxtConfig({
         title: 'Ka lumières',
         favicon: 'favicon.ico',
         meta: [
-            
+
             // Content security policy
             { httpEquiv: "Content-Security-Policy", content: "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; media-src 'self' data:;" },
 
@@ -35,7 +35,7 @@ export default defineNuxtConfig({
             { property: 'og:type', content: 'website' },
             { property: 'og:locale', content: 'fr_FR' },
             { property: 'og:site_name', content: 'Ka lumières' },
-            
+
         ],
         link: [
             { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
@@ -44,5 +44,11 @@ export default defineNuxtConfig({
     },
     css: [
         '@/assets/sass/app.scss'
-    ]
+    ],
+    modules: [
+        // Simple usage
+        'nuxt-purgecss',
+        // With options
+       // ['nuxt-purgecss', { /* module options */ }],
+      ]
 })
