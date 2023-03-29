@@ -6,7 +6,7 @@
   </a>
   </div>
   <nav>
-    <ul class="mb-0">
+    <ul class="mb-0 p-0">
       <li class="d-none d-md-block"><a href="#home">Home</a></li>
       <li><a href="#services">Services</a></li>
       <li><a href="#about">A&nbsp;propos</a></li>
