@@ -5,8 +5,9 @@
             <div class="d-flex flex-column service-card justify-content-between" :class="reversed ? 'flex-md-row-reverse' : 'flex-md-row'">
                 <div class="col-12 col-md-4">
                     <div class="d-flex justify-content-center align-content-center">
-                        <img src="~/assets/img/ka-lumieres-lampe-only.png" alt="ka-lampe" class="ka-lampe" width="100"
-                            height="100">
+                        <slot name="image">
+                            <img src="~/assets/img/ka-lumieres-lampe-only.png" alt="ka-lampe" class="ka-lampe" width="100" height="100">
+                        </slot>
                     </div>
                     <h3 :id="link" class="card-title text-center fw-bolder">{{ title }}</h3>
                     <hr class="d-block d-md-none">
@@ -33,7 +34,7 @@ defineProps({
     reversed: {
         type: Boolean,
         default: false
-    }
+    },
 })
 </script>
 

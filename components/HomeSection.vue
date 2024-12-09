@@ -1,6 +1,6 @@
 <template>
   <section id="home">
-    <div class="container">
+    <div class="container shadow">
       <div class="vstack text-center">
         <div class="">
           <h1 class="fw-bolder text-white" style="font-size: xxx-large;">Bienvenue !</h1>
@@ -18,6 +18,29 @@
   </section>
 </template>
 
-<style>
-section#home {}
+<style scoped>
+section#home {
+  background: url('~/assets/img/ka-lumieres-home-bg.jpg') no-repeat center center;
+  background-size: cover;
+  padding: 50px 15px;
+  color: white;
+  padding: relative;
+}
+
+h3 {
+  position: relative;
+  z-index: +2;
+}
+
+h3::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Adjust opacity */
+  z-index: -1;
+} 
+
 </style>
