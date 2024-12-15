@@ -5,6 +5,7 @@
         <HeroSection  />
         <AboutSection />
         <ContactSection />
+        <LogoSection class="d-flex d-lg-none" />
     </div>
 </template>
 <style lang="scss">

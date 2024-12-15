@@ -25,10 +25,20 @@
                     <span class="ps-2">contact@kalumieres.fr</span>
                 </a>
         </div>
-        <div class="container hstack align-center align-content-center mb-3">
-            <a class="d-block lh-1 col-4 text-center smaller" href="/pdf/mentions-legales-ka-lumieres.pdf">Mentions légales</a>
-            <a class="d-block lh-1 col-4 text-center smaller">Conditions d'utilisation</a>
-            <a class="d-block lh-1 col-4 text-center smaller">Politique de confidentialité</a>
+        <div class="conditions-wrapper container hstack align-center align-content-center mb-3 d-flex d-md-none">
+            <a class="d-block lh-1 col-4 text-center small" href="/pdf/mentions-legales-ka-lumieres.pdf">Mentions légales</a>
+            <a class="d-block lh-1 col-4 text-center small">Conditions d'utilisation</a>
+            <a class="d-block lh-1 col-4 text-center small">Politique de confidentialité</a>
+        </div>
+        <div class="conditions-wrapper container hstack align-center align-content-center mb-3 d-none d-md-flex">
+            <a class="d-block lh-1 col-4 text-center" href="/pdf/mentions-legales-ka-lumieres.pdf">Mentions légales</a>
+            <a class="d-block lh-1 col-4 text-center">Conditions d'utilisation</a>
+            <a class="d-block lh-1 col-4 text-center">Politique de confidentialité</a>
         </div>
 </section>
 </template>
+<style scoped>
+    .conditions-wrapper > a {
+        color: var(--bs-text-dark);
+    }
+</style>
