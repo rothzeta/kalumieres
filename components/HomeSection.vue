@@ -25,6 +25,7 @@ section#home {
   padding: 50px 15px;
   color: white;
   padding: relative;
+  min-height: 300px;
 }
 
 h3 {

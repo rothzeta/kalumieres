@@ -4,8 +4,9 @@
         <ServicesSection />
         <HeroSection  />
         <AboutSection />
-        <ContactSection />
+        <ContactSection no-mentions />
         <LogoSection class="d-flex d-lg-none" />
+        <ContactSection mentions-only />
     </div>
 </template>
 <style lang="scss">
