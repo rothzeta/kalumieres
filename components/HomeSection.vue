@@ -1,18 +1,21 @@
 <template>
   <section id="home">
-    <div class="container shadow">
-      <div class="vstack text-center">
-        <div class="">
-          <h1 class="fw-bolder text-white" style="font-size: xxx-large;">Bienvenue !</h1>
-          <div class="d-flex align-items-lg-center justify-items-center flex-column flex-md-row">
-            <div class="flex-shrink-1 flex-grow-0 d-flex justify-items-start align-items-center px-md-5 px-0"
-              style="min-height:0; min-width: 96px; width: 100%; max-width: 360px;">
-              <img src="~/assets/img/ka-lumieres-lampe-only.png" class="img-fluid d-none d-lg-block" alt="Ka lumières logo"
-                style="height:auto; width:auto;">
-            </div>
-            <h3>Basée à Paris, l’entreprise Ka Lumières est le prestataire idéal pour assurer votre présence numérique en toute conformité.</h3>
-          </div>
+    <div class="consent-wrapper">
+      <RGdprConsent />
+    </div>
+    <div class="vstack home-content text-center justify-content-around">
+      <h1 class="fw-bolder home-title">Bienvenue !</h1>
+      <div class="d-flex align-items-center flex-column flex-md-row home-section">
+        <div class="home-logo-container">
+          <img 
+            src="~/assets/img/ka-lumieres-lampe-only.png" 
+            class="img-fluid d-none d-lg-block home-logo" 
+            alt="Ka Lumières logo"
+          >
         </div>
+        <h3 class="home-text p-lg-3">
+          Basée à Paris, l’entreprise Ka Lumières est le prestataire idéal pour assurer votre présence numérique en toute conformité.
+        </h3>
       </div>
     </div>
   </section>
@@ -20,28 +23,59 @@
 
 <style scoped>
 section#home {
+  position: relative;
   background: url('~/assets/img/ka-lumieres-home-bg.jpg') no-repeat center center;
   background-size: cover;
-  padding: 50px 15px;
   color: white;
-  padding: relative;
-  min-height: 300px;
+  padding: 0;
+  margin-top: 90px;
 }
 
-h3 {
-  position: relative;
-  z-index: +2;
-}
-
-h3::after {
+section#home::before {
   content: '';
   position: absolute;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.5); /* Adjust opacity */
-  z-index: -1;
-} 
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
 
+.home-content {
+  position: relative;
+  z-index: 2;
+  padding: 50px 15px;
+  min-height: 450px;
+}
+
+.consent-wrapper {
+  position: relative;
+  z-index: 3;
+}
+
+.home-title {
+  font-size: xxx-large;
+  color: white;
+}
+
+.home-logo-container {
+  min-width: 96px;
+  width: 100%;
+  max-width: 360px;
+  flex-shrink: 1;
+  flex-grow: 0;
+  padding: 0 1rem;
+}
+
+.home-logo {
+  height: auto;
+  width: auto;
+}
+
+@media (max-width: 768px) {
+  section#home {
+    margin-top: 0;
+  }
+}
 </style>
