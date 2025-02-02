@@ -1,11 +1,11 @@
 <template>
-    <section id="contact">
-        <h2 class="px-3 mb-5">
+    <section class="contact">
+        <h2 v-if="!mentionsOnly" class="px-3 mb-5">
             <div class="hstack justify-content-center">
                 <div>Contact</div>
             </div> 
         </h2>
-        <div class="d-flex flex-sm-row flex-column justify-content-center mb-5">
+        <div v-if="!mentionsOnly" class="d-flex flex-sm-row flex-column justify-content-center mb-5">
                 <a class="hstack align-self-center mx-3 text-decoration-none text-black fw-semibold"
                     href="https://instagram.com/kalumieres">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
@@ -25,18 +25,25 @@
                     <span class="ps-2">contact@kalumieres.fr</span>
                 </a>
         </div>
-        <div class="conditions-wrapper container hstack align-center align-content-center mb-3 d-flex d-md-none">
-            <a class="d-block lh-1 col-4 text-center small" href="/pdf/mentions-legales-ka-lumieres.pdf">Mentions légales</a>
-            <a class="d-block lh-1 col-4 text-center small">Conditions d'utilisation</a>
-            <a class="d-block lh-1 col-4 text-center small">Politique de confidentialité</a>
+        <div v-if="!noMentions" data-is="mobile" class="conditions-wrapper container hstack align-center align-content-center mb-3 d-flex d-md-none">
+            <a class="d-block lh-1 col-4 text-center smaller" href="/pdf/mentions-legales-ka-lumieres.pdf">Mentions légales</a>
+            <a class="d-block lh-1 col-4 text-center smaller">Conditions d'utilisation</a>
+            <a class="d-block lh-1 col-4 text-center smaller">Politique de confidentialité</a>
         </div>
-        <div class="conditions-wrapper container hstack align-center align-content-center mb-3 d-none d-md-flex">
+        <div v-if="!noMentions" class="conditions-wrapper container hstack align-center align-content-center mb-3 d-none d-md-flex">
             <a class="d-block lh-1 col-4 text-center" href="/pdf/mentions-legales-ka-lumieres.pdf">Mentions légales</a>
             <a class="d-block lh-1 col-4 text-center">Conditions d'utilisation</a>
             <a class="d-block lh-1 col-4 text-center">Politique de confidentialité</a>
         </div>
 </section>
 </template>
+<script setup lang="ts">
+import { defineProps } from 'vue';
+const props = defineProps({
+    mentionsOnly: Boolean,
+    noMentions: Boolean
+});
+</script>
 <style scoped>
     .conditions-wrapper > a {
         color: var(--bs-text-dark);
