@@ -3,7 +3,7 @@
       <div class="row h-100 justify-content-center">
         <div class="col-12 alert-wrapper">
           <div class="alert mb-0" role="alert">
-            <p class="mb-0 small">
+            <p class="mb-0 smaller">
               Ce site n'utilise que des cookies nécessaires à son bon fonctionnement
             </p>
           </div>
